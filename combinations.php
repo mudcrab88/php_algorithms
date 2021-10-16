@@ -1,5 +1,6 @@
 <?php
 
+//функция вывода сочетаний по $number из элементов массива $nums
 function combinations(array $nums, int $number): void
 {
 	$count = count($nums);

@@ -7,7 +7,7 @@ function quick_sort(array $array): array
 	} else {
 		$less = [];
 		$greater = [];
-		$pivot = $array[0];
+		$pivot = $array[rand(0, count($array) - 1)];
 		
 		foreach ($array as $item) {
 			if ($item < $pivot) {
@@ -24,12 +24,14 @@ function quick_sort(array $array): array
 
 //формирование массива для проверки
 $array = [];
-for ($i = 0; $i < 10000; $i++) {
-	$array[$i] = 10000 - $i;
+for ($i = 0; $i < 20000; $i++) {
+	$array[$i] = 20000 - $i;
 }
+echo $array[0].' '.$array[5000].' '.$array[9999].PHP_EOL;
 
 $beginTime = microtime(true);
 $array = quick_sort($array);
 $endTime = microtime(true);
 $selectionTime = $endTime - $beginTime;
-echo 'Время работы быстрой сортировки - '.$selectionTime.PHP_EOL;
+echo $array[0].' '.$array[5000].' '.$array[9999].PHP_EOL;
+echo 'Время работы быстрой сортировки: '.$selectionTime.PHP_EOL;
