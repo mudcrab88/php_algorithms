@@ -9,6 +9,7 @@ $graph["peggy"] = [];
 $graph["thom"] = [];
 $graph["jonny"] = [];
 
+//поиск в ширину
 function findMangoSeller(string $name, array $graph): bool
 {
 	$queue = new SplQueue();

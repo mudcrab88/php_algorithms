@@ -31,12 +31,14 @@ function selection_sorting(array $array): array
 
 //формирование массива для проверки
 $array = [];
-for ($i = 0; $i < 100000; $i++) {
-	$array[$i] = 100000 - $i;
+for ($i = 0; $i < 20000; $i++) {
+	$array[$i] = 20000 - $i;
 }
-
+echo $array[0].' '.$array[5000].' '.$array[9999].PHP_EOL;
 $beginTime = microtime(true);
 $array = selection_sorting($array);
 $endTime = microtime(true);
+
+echo $array[0].' '.$array[5000].' '.$array[9999].PHP_EOL;
 $selectionTime = $endTime - $beginTime;
-echo 'Время работы сортировки выбором - '.$selectionTime.PHP_EOL;
+echo 'Время работы сортировки выбором: '.$selectionTime.PHP_EOL;
