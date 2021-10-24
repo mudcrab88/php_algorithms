@@ -1,5 +1,5 @@
 <?php
-
+//функция сортировки вставками
 function insert_sorting(array $nums): array
 {
 	$num = count($nums);
