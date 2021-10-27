@@ -24,7 +24,7 @@ function selection_sorting(array $array): array
 		$min_index = array_keys($array, min($array))[0];
 		$newArray[] = $array[$min_index];
 		unset($array[$min_index]);
-		//$array = array_values($array);		
+		$array = array_values($array);		
 	}
 	
 	return $newArray;
