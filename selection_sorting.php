@@ -20,10 +20,11 @@ function selection_sorting(array $array): array
 	$newArray = [];
 	$len = count($array);
 	for ($j = 0; $j < $len; $j++) {
-		$min_index = find_min($array);
+		//$min_index = find_min($array);
+		$min_index = array_keys($array, min($array))[0];
 		$newArray[] = $array[$min_index];
 		unset($array[$min_index]);
-		$array = array_values($array);		
+		//$array = array_values($array);		
 	}
 	
 	return $newArray;
